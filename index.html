@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    #scene {
+      margin: 0 auto;
+      width: 80%;
+      height: 80%;
+      border: 1px solid black;
+      overflow: hidden;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id="scene" data-relative-input="true">
+    <img src="trees.svg" data-depth='0.3' width="100%" class="img-1" />
+    <img src="waves.svg" data-depth='0.6' width="100%" class="img-2" />
+    <!--  <img src="img/man.png" data-depth='0.1' width="100%" class="img-5" />-->
+  </div>
+
+  <!-- scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+  <script>
+    var scene = document.getElementById('scene');
+    var parallaxInstance = new Parallax(scene);
+  </script>
+
+</body>
+
+</html>

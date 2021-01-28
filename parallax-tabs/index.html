@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: #F8F8F8;
+    }
+
+    .container {
+      max-width: 750px;
+    }
+
+    .shell {
+      position: relative;
+      width: 726px;
+      height: 300px;
+      overflow: hidden;
+      border: 1px solid black;
+    }
+
+    img {
+      height: 300px;
+    }
+
+    #bg {
+      position: absolute;
+    }
+
+    #fg {
+      position: absolute;
+    }
+
+    #text {
+      position: absolute;
+      left: -340px;
+      width: 4200px;
+      display: none;
+    }
+
+    #text div {
+      color: #fff;
+      font-size: 120px;
+      font-weight: bold;
+      line-height: 300px;
+      text-align: center;
+      text-shadow: 3px 3px 5px #000;
+      width: 1400px;
+      float: left;
+    }
+
+    #nav {
+      margin-top: 5px;
+    }
+
+    #nav div {
+      color: #354355;
+      display: inline-block;
+      width: 230px;
+      font-size: 18px;
+      line-height: 48px;
+      text-align: center;
+      cursor: pointer;
+      background: #fff;
+      margin-left: 5px;
+    }
+
+    #nav div:hover {
+      background-color: #EEE;
+    }
+  </style>
+
+
+  <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js'></script>
+
+</head>
+
+<body>
+
+  <div class="container mt-5">
+    <div class="shell">
+      <div id="bg"><img src="trees.svg" /></div>
+      <div id="fg"><img src="waves.svg" /></div>
+      <div id="text">
+        <div>ONE</div>
+        <div>TWO</div>
+        <div>THREE</div>
+      </div>
+    </div>
+    <div id="nav">
+      <div id="one">one</div>
+      <div id="two">two</div>
+      <div id="three">three</div>
+    </div>
+  </div>
+
+  <script>
+    var bg = document.getElementById("bg");
+    var fg = document.getElementById("fg");
+    var one = document.getElementById("one");
+    var two = document.getElementById("two");
+    var three = document.getElementById("three");
+    var txt = document.getElementById("text");
+
+    one.addEventListener("click", function() {
+      TweenLite.to(bg, 1.5, {
+        css: {
+          left: "0px"
+        }
+      });
+      TweenLite.to(fg, 1.5, {
+        css: {
+          left: "0px"
+        }
+      });
+      TweenLite.to(txt, 1.5, {
+        css: {
+          left: "-340px"
+        }
+      });
+    });
+
+    two.addEventListener("click", function() {
+      TweenLite.to(bg, 1.5, {
+        css: {
+          left: "-200px"
+        }
+      });
+      TweenLite.to(fg, 1.5, {
+        css: {
+          left: "-600px"
+        }
+      });
+      TweenLite.to(txt, 1.5, {
+        css: {
+          left: "-1740px"
+        }
+      });
+    });
+
+    three.addEventListener("click", function() {
+      TweenLite.to(bg, 1.5, {
+        css: {
+          left: "-400px"
+        }
+      });
+      TweenLite.to(fg, 1.5, {
+        css: {
+          left: "-1200px"
+        }
+      });
+      TweenLite.to(txt, 1.5, {
+        css: {
+          left: "-3140px"
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -76,7 +76,7 @@
     }
   </style>
 
-
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
   <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js'></script>
 
 </head>
@@ -101,65 +101,69 @@
   </div>
 
   <script>
-    var bg = document.getElementById("bg");
-    var fg = document.getElementById("fg");
-    var one = document.getElementById("one");
-    var two = document.getElementById("two");
-    var three = document.getElementById("three");
-    var txt = document.getElementById("text");
+    $(window).load(function() {
 
-    one.addEventListener("click", function() {
-      TweenLite.to(bg, 1.5, {
-        css: {
-          left: "0px"
-        }
-      });
-      TweenLite.to(fg, 1.5, {
-        css: {
-          left: "0px"
-        }
-      });
-      TweenLite.to(txt, 1.5, {
-        css: {
-          left: "-340px"
-        }
-      });
-    });
+      var bg = document.getElementById("bg");
+      var fg = document.getElementById("fg");
+      var one = document.getElementById("one");
+      var two = document.getElementById("two");
+      var three = document.getElementById("three");
+      var txt = document.getElementById("text");
 
-    two.addEventListener("click", function() {
-      TweenLite.to(bg, 1.5, {
-        css: {
-          left: "-200px"
-        }
+      one.addEventListener("click", function() {
+        TweenLite.to(bg, 1.5, {
+          css: {
+            left: "0px"
+          }
+        });
+        TweenLite.to(fg, 1.5, {
+          css: {
+            left: "0px"
+          }
+        });
+        TweenLite.to(txt, 1.5, {
+          css: {
+            left: "-340px"
+          }
+        });
       });
-      TweenLite.to(fg, 1.5, {
-        css: {
-          left: "-600px"
-        }
-      });
-      TweenLite.to(txt, 1.5, {
-        css: {
-          left: "-1740px"
-        }
-      });
-    });
 
-    three.addEventListener("click", function() {
-      TweenLite.to(bg, 1.5, {
-        css: {
-          left: "-400px"
-        }
+      two.addEventListener("click", function() {
+        TweenLite.to(bg, 1.5, {
+          css: {
+            left: "-200px"
+          }
+        });
+        TweenLite.to(fg, 1.5, {
+          css: {
+            left: "-600px"
+          }
+        });
+        TweenLite.to(txt, 1.5, {
+          css: {
+            left: "-1740px"
+          }
+        });
       });
-      TweenLite.to(fg, 1.5, {
-        css: {
-          left: "-1200px"
-        }
+
+      three.addEventListener("click", function() {
+        TweenLite.to(bg, 1.5, {
+          css: {
+            left: "-400px"
+          }
+        });
+        TweenLite.to(fg, 1.5, {
+          css: {
+            left: "-1200px"
+          }
+        });
+        TweenLite.to(txt, 1.5, {
+          css: {
+            left: "-3140px"
+          }
+        });
       });
-      TweenLite.to(txt, 1.5, {
-        css: {
-          left: "-3140px"
-        }
-      });
+
     });
   </script>
 </body>
